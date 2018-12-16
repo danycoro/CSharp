@@ -1,12 +1,32 @@
-//Imprimir Números Pares.
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-for (int i = 1; i <= 10; i++)
+namespace Consola
+{
+    static class Program
+    {
+        static void Main(string[] args)
+        {
+            NumerosPar(100);
+            Console.ReadKey();
+
+        }
+
+        public static ArrayList NumerosPar(int hastaQueNúmero)
+        {
+            ArrayList numeros = new ArrayList();
+            for (int i = 1; i < hastaQueNúmero; i++)
             {
                 if (i % 2 != 0)
                     continue;
-
-                Console.WriteLine(i);
+                numeros.Add(i);
             }
-// Otra Manera
-            
-            Console.Write($"{(i % 2 == 0 ? i.ToString() : "\n")}");
+            return numeros;
+        }
+    }
+}
