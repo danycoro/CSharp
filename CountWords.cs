@@ -21,7 +21,7 @@ namespace Consola
                           "I do not like green eggs and ham.";
 
             ;
-            foreach (KeyValuePair<string, int> result in Genericos.CountWords(text))
+            foreach (KeyValuePair<string, int> result in CountWords(text))
             {
 
                 WriteLine($"Palabra: {result.Key} \t\tFrecuencia: {result.Value} ");
